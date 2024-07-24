@@ -17,7 +17,7 @@ const ThemeStore = () => {
   };
 
   return (
-    <div>
+    <div className='App'>
       <h1>Purchase Themes</h1>
       <button onClick={() => handlePurchase('dark')}>Buy Dark Theme</button>
       <button onClick={() => handlePurchase('light')}>Buy Light Theme</button>

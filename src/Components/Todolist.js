@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Todo from './Todo';
 import Button from 'react-bootstrap/Button';
+import { Form } from 'react-bootstrap';
 
 const TodoList = () => {
   // localStorage'dan verileri oku ve başlangıç değeri olarak kullan
@@ -41,12 +42,12 @@ const TodoList = () => {
   };
 
   return (
-    <div>
-      <h1 className='mb-4 pt-4'>Todo List</h1>
-      <Button variant="primary">
-        <Link to="/theme-store" style={{ color: 'white', textDecoration: 'none' }}>Theme Store</Link>
-      </Button>
-      <form onSubmit={e => {
+    <div className="App">
+    <h1 className='mb-4 pt-4'>Todo List</h1>
+    <Button variant="primary" className="mb-3">
+      <Link to="/theme-store" style={{ color: 'white', textDecoration: 'none' }}>Theme Store</Link>
+    </Button>
+    <form onSubmit={e => {
         e.preventDefault();
         const text = e.target.elements.todo.value;
         if (text) {
